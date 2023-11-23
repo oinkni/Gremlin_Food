@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gremlin Food</title>
+</head>
+<body>
+    <h1>Add New Recipe</h1>
+    <form th:action="@{/recipe/new}" th:object="${recipe}" method="post">
+        <label>Title: <input type="text" th:field="*{title}" /></label><br/>
+        <label>Description: <textarea th:field="*{description}"></textarea></label><br/>
+        <button type="submit">Save Recipe</button>
+    </form>
+    <a href="/recipes">Back to Recipes</a>
+</body>
+</html>
